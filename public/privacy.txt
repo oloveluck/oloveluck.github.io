@@ -1,0 +1,77 @@
+PRIVACY POLICY
+
+Last Updated: January 2026
+
+This privacy policy explains how we handle data when you use our application and connect your Oura and/or Garmin accounts.
+
+1. DATA COLLECTION
+
+When you authorize our application, we access data from your connected accounts:
+
+Oura Ring Data:
+- Sleep metrics (duration, phases, efficiency, timing)
+- Readiness scores and contributors
+- Activity data (steps, calories, active time)
+- Biometric data (heart rate, HRV, temperature, SpO2)
+
+Garmin Connect Data:
+- Activity and workout summaries
+- Daily metrics (steps, heart rate, stress, sleep)
+- Health stats and body composition
+- Training and recovery data
+
+We only access data you explicitly authorize through the OAuth consent flow.
+
+2. HOW WE USE YOUR DATA
+
+Your data is used solely to:
+- Display your health and fitness metrics within the application
+- Generate personal insights and visualizations for your use
+
+We do NOT:
+- Sell your data
+- Share your data with advertisers
+- Use your data for purposes beyond the stated functionality
+
+3. DATA STORAGE AND SECURITY
+
+- All data is encrypted in transit (TLS) and at rest
+- We implement industry-standard security practices
+- Access is restricted to authenticated users only
+- We retain data only as long as needed to provide the service
+
+4. DATA SHARING
+
+Your data is not shared with third parties except:
+- With your explicit consent
+- When required by law
+- With service providers under confidentiality agreements solely to operate the application
+
+5. YOUR RIGHTS AND CONTROLS
+
+You may at any time:
+- Revoke access through your Oura or Garmin account settings
+- Request a copy of your data
+- Request deletion of your data from our systems
+
+To exercise these rights, contact us using the information below.
+
+6. THIRD-PARTY POLICIES
+
+Our application integrates with services governed by their own privacy policies:
+- Oura: https://ouraring.com/privacy-policy
+- Garmin: https://www.garmin.com/privacy
+
+7. CHILDREN'S PRIVACY
+
+This application is not intended for users under 13 years of age. We do not knowingly collect data from children.
+
+8. POLICY UPDATES
+
+We will update this policy as needed. Material changes will be reflected in the "Last Updated" date above.
+
+9. CONTACT
+
+For privacy inquiries or data requests:
+Owen Loveluck
+https://oloveluck.com
