@@ -5,7 +5,7 @@
 //> using dep org.scala-js::scalajs-dom::2.8.1
 
 import scalatags.JsDom.all.*
-import org.scalajs.dom.document
+import org.scalajs.dom.{document, window}
 
 // Domain types
 opaque type Svg = String
@@ -18,17 +18,30 @@ object Url:
   def apply(s: String): Url = s
   extension (u: Url) def value: String = u
 
+opaque type Slug = String
+object Slug:
+  def apply(s: String): Slug = s
+  extension (s: Slug) def value: String = s
+
 enum LinkStyle:
   case Icon(svg: Svg)
   case Text(display: String)
 
 final case class Link(url: Url, label: String, style: LinkStyle)
 
+final case class Post(slug: Slug, title: String, date: String, content: Frag)
+
+enum Route:
+  case Home
+  case OpinionsList
+  case OpinionPost(slug: Slug)
+
 final case class SiteData(
   name: String,
   bio: String,
   socialLinks: List[Link],
-  footerLinks: List[Link]
+  footerLinks: List[Link],
+  opinions: List[Post]
 )
 
 // Extension for elegant fragment composition
@@ -48,7 +61,7 @@ object Icons:
 object Data:
   val site: SiteData = SiteData(
     name = "Owen Loveluck",
-    bio = "Working on healthcare, functional programming, and sometimes climbing mountains.",
+    bio = "Currently working on healthcare, functional programming, and sometimes climbing mountains.",
     socialLinks = List(
       Link(Url("https://github.com/oloveluck"), "GitHub", LinkStyle.Icon(Icons.github)),
       Link(Url("https://linkedin.com/in/oloveluck"), "LinkedIn", LinkStyle.Icon(Icons.linkedin)),
@@ -57,19 +70,70 @@ object Data:
     footerLinks = List(
       Link(Url("privacy.txt"), "Privacy Policy", LinkStyle.Text("privacy")),
       Link(Url("llms.txt"), "LLMs Info", LinkStyle.Text("for robots"))
-    )
+    ),
+    opinions = Opinions.posts
   )
+
+// Router for hash-based navigation
+object Router:
+  def parse(hash: String): Route = hash match
+    case "" | "#" | "#/"                  => Route.Home
+    case "#/opinions"                     => Route.OpinionsList
+    case s if s.startsWith("#/opinions/") => Route.OpinionPost(Slug(s.stripPrefix("#/opinions/")))
+    case _                                => Route.Home
 
 // Pure view functions
 object View:
-  def page(data: SiteData): Frag =
-    frag(wrapper(data), footer(data.footerLinks))
+  def page(data: SiteData, route: Route): Frag = route match
+    case Route.Home              => frag(homeWrapper(data), footer(data.footerLinks))
+    case Route.OpinionsList      => frag(opinionsPage(data), footer(data.footerLinks))
+    case Route.OpinionPost(slug) =>
+      data.opinions.find(_.slug.value == slug.value) match
+        case Some(post) => frag(postPage(post), footer(data.footerLinks))
+        case None       => frag(homeWrapper(data), footer(data.footerLinks))
 
-  def wrapper(data: SiteData): Frag =
+  def homeWrapper(data: SiteData): Frag =
     div(cls := "wrapper")(
       h1(data.name),
       p(cls := "bio")(data.bio),
-      linkBar(data.socialLinks)
+      linkBar(data.socialLinks),
+      opinionsLink(data.opinions.nonEmpty)
+    )
+
+  def opinionsLink(hasOpinions: Boolean): Frag =
+    if hasOpinions then
+      div(cls := "opinions-link")(
+        a(href := "#/opinions")("opinions")
+      )
+    else frag()
+
+  def opinionsPage(data: SiteData): Frag =
+    div(cls := "opinions-wrapper")(
+      div(cls := "opinions-header")(
+        a(href := "#/", cls := "back-link")("← back"),
+        h1("opinions")
+      ),
+      div(cls := "post-list")(
+        data.opinions.sortBy(_.date).reverse.map(postPreview)
+      )
+    )
+
+  def postPreview(post: Post): Frag =
+    a(href := s"#/opinions/${post.slug.value}", cls := "post-preview")(
+      span(cls := "post-date")(post.date),
+      span(cls := "post-title")(post.title)
+    )
+
+  def postPage(post: Post): Frag =
+    div(cls := "post-wrapper")(
+      div(cls := "post-header")(
+        a(href := "#/opinions", cls := "back-link")("← opinions")
+      ),
+      tag("article")(cls := "post-content")(
+        h1(post.title),
+        div(cls := "post-date")(post.date),
+        div(cls := "post-body")(post.content)
+      )
     )
 
   def linkBar(links: List[Link]): Frag =
@@ -84,6 +148,12 @@ object View:
       links.map(renderLink).intersperse(span(cls := "separator")("\u00b7"))
     )
 
-// Entry point - side effects at the edge
+// Entry point - reactive hash-based routing
 @main def app(): Unit =
-  document.body.appendChild(View.page(Data.site).render)
+  def render(): Unit =
+    val route = Router.parse(window.location.hash)
+    document.body.innerHTML = ""
+    document.body.appendChild(View.page(Data.site, route).render)
+
+  render()
+  window.addEventListener("hashchange", _ => render())

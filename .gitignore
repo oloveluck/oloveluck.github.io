@@ -5,6 +5,9 @@
 # compiled JS output
 public/main.js
 
+# generated code
+src/generated/
+
 # logs
 npm-debug.log*
 yarn-debug.log*

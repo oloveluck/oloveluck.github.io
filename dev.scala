@@ -7,9 +7,19 @@ import java.nio.file.{Files, Paths}
 
 @main def serve(args: String*): Unit =
   val port = args.headOption.flatMap(_.toIntOption).getOrElse(8000)
-  // First build the Scala.js
+
+  // First run markdown processor to generate Opinions.scala
+  println("Processing markdown files...")
+  val buildResult = os.proc("scala-cli", "run", "build.scala")
+    .call(cwd = os.pwd, check = false)
+
+  if buildResult.exitCode != 0 then
+    println(s"Markdown processing failed:\n${buildResult.err.text()}")
+    sys.exit(1)
+
+  // Then build the Scala.js
   println("Building Scala.js...")
-  val result = os.proc("scala-cli", "--power", "package", "--js", "src/Main.scala", "-o", "public/main.js", "-f")
+  val result = os.proc("scala-cli", "--power", "package", "--js", "src/Main.scala", "src/generated/Opinions.scala", "-o", "public/main.js", "-f")
     .call(cwd = os.pwd, check = false)
 
   if result.exitCode != 0 then
