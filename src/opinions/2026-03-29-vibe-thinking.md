@@ -11,9 +11,7 @@ date: 2026-03-29
 > *"Thinking is a conversation that the soul has with itself."*
 > — Socrates, Theaetetus
 
-Conversation requires friction — the slow, effortful work of translating thought into words is how an idea clarifies itself. What happens when AI enters this conversation? It can facilitate and free us to think more rigorously, or the conversation can bypass us entirely and produce empty words in the shape of a thought. Those who use AI to think better will compound their advantage. Those who reject AI and think the same will lose. Those who use AI to think less will accelerate their own irrelevance. 
-
-**AI Slop is not an AI problem, it is a human problem.**
+Conversation requires friction — the slow, effortful work of translating thought into words is how an idea clarifies itself. What happens when AI enters this conversation? It can facilitate and free us to think more rigorously, or the conversation can bypass us entirely and produce empty words in the shape of a thought. Those who use AI to think better will compound their advantage. Those who reject AI and think the same will lose. Those who use AI to think less will accelerate their own irrelevance.
 
 ---
 
@@ -39,7 +37,7 @@ AI is the newest and most powerful addition to the stack and will profoundly imp
 
 A camera does not take a lazy photograph. An LLM does not produce hollow content — it amplifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willingness to be wrong — and you get something real.
 
-AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not shy away from producing it. Creators must have the courage to use AI to test their ideas and accept what they find. It is feedback. The courage is in accepting the failures of AI as our own without deflecting blame onto the tools. As always, our ego is the greatest obstacle.
+AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not shy away from producing it. Creators must have the courage to use AI to test their ideas and accept what they find. It is feedback. The courage is in accepting ownership over AI generated output without deflecting blame onto the tools when it fails. As always, our ego is the greatest obstacle.
 
 ---
 
@@ -63,9 +61,9 @@ Modern business trends toward structure over instinct, measurement over judgment
 
 Expanding an idea is easy. Compression is where the thinking happens. AI has dramatically increased the rate at which we produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
 
-Writers can use a conversation with an AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that earns a reader's attention.
+Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that earns a reader's attention.
 
-The output of good AI-assisted writing does not necessarily mean a longer document or less time spent writing. Success is the production of stronger ideas.
+The output of good AI-assisted writing does not mean a longer document or less time spent writing. Success is the production of stronger ideas.
 
 ---
 
