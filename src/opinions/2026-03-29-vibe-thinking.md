@@ -1,3 +1,8 @@
+---
+title: Vibe Thinking
+date: 2026-03-29
+---
+
 # Vibe Thinking
 ### On slop, abstractions, and the discipline of saying less
 
@@ -6,7 +11,7 @@
 > *"Thinking is a conversation that the soul has with itself."*
 > — Socrates, Theaetetus
 
-Conversation requires friction — the slow, effortful work of translating thought into words is how an idea clarifies itself. What happens whan AI enters this conversation? It can facilitate and free us to think more rigorously, or the conversation can bypass us entirely and produce empty words in the shape of a thought. Those who use AI to think better will compound their advantage. Those who reject AI and think the same will lose. Those who use AI to think less will accelerate their own irrelevance. 
+Conversation requires friction — the slow, effortful work of translating thought into words is how an idea clarifies itself. What happens when AI enters this conversation? It can facilitate and free us to think more rigorously, or the conversation can bypass us entirely and produce empty words in the shape of a thought. Those who use AI to think better will compound their advantage. Those who reject AI and think the same will lose. Those who use AI to think less will accelerate their own irrelevance. 
 
 **AI Slop is not an AI problem, it is a human problem.**
 
@@ -28,12 +33,14 @@ AI is the newest and most powerful addition to the stack and will profoundly imp
 ---
 
 ## Blaming our tools
+
 > *"Talent is the ability to let ideas manifest themselves through you"*
 > — Rick Rubin, *The Creative Act*
 
 A camera does not take a lazy photograph. An LLM does not produce hollow content — it amplifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willingness to be wrong — and you get something real.
 
-AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not shy away from producing it. Creators must have the courage to use AI to test their ideas and accept what they find. It is feedback. The courage is in accepting the failures of AI as our own without deflecting blame onto the tools. As always, our ego is the greatest obstacle. 
+AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not shy away from producing it. Creators must have the courage to use AI to test their ideas and accept what they find. It is feedback. The courage is in accepting the failures of AI as our own without deflecting blame onto the tools. As always, our ego is the greatest obstacle.
+
 ---
 
 ## Effective AI use
@@ -43,9 +50,10 @@ AI slop is an indication of weak ideas or a lack of intellectual discipline — 
 
 Trending questions about AI circle around tips to use it better — better prompts, better models, better agent configurations. These questions support an economy of customers who want to avoid putting in any real effort. There is no prompt that fixes a weak idea, no model that supplies conviction, no agent configuration that replaces the harder work of knowing what you believe and why. Those obsessing over tooling details are asking the wrong question. 
 
-AI already handles structured reasoning more effectively than we do, which means than human intuition has never been so valuable. What a model cannot replicate is our capacity to sense that something is wrong before we can say why, to see a connection the data doesn't show, or to ask a question that reframes the problem. In the age of AI, the most valueable skill will be effectivly translating intuition into structured information. Writing. 
+AI already handles structured reasoning more effectively than we do, which means that human intuition has never been so valuable. What a model cannot replicate is our capacity to sense that something is wrong before we can say why, to see a connection the data doesn't show, or to ask a question that reframes the problem. In the age of AI, the most valuable skill will be effectively translating intuition into structured information. Writing. 
 
-Modern business trends toward structure over instinct, measurement over judgment, process over intuition. AI marks the success of this movement. When structured reasoning becomes cheap, what remains scarce is the thinking that cannot be measured. Ideas dervied from structures that constrain access to human intuition will no longer hold value.
+Modern business trends toward structure over instinct, measurement over judgment, process over intuition. AI marks the success of this movement. When structured reasoning becomes cheap, what remains scarce is the thinking that cannot be measured. Ideas derived from structures that constrain access to human intuition will no longer hold value.
+
 ---
 
 ## The cost of compression
@@ -57,13 +65,13 @@ Expanding an idea is easy. Compression is where the thinking happens. AI has dra
 
 Writers can use a conversation with an AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that earns a reader's attention.
 
-The output of good AI-assisted writing does not necesserily mean a longer document or less the time spent writing. Success is the production of stronger ideas.
+The output of good AI-assisted writing does not necessarily mean a longer document or less time spent writing. Success is the production of stronger ideas.
 
 ---
 
-## A note on this blog post.
+## A note on this blog post
 
-My arguments are gestrual and resists quantification. That is the point.
+My arguments are gestural and resist quantification. That is the point.
 
 This piece was written in conversation with an AI with manual editing. The argument — the claims, the framing, the things I believe — existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
 
