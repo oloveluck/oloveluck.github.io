@@ -15,7 +15,7 @@ Conversation requires friction — the slow, effortful work of translating thoug
 
 ---
 
-## The new abstraction in information technology
+## The new abstraction
 
 > *"The truth is no online database will replace your daily newspaper, no CD-ROM can take the place of a competent teacher and no computer network will change the way government works."*
 > — Clifford Stoll, Newsweek, 1995
@@ -26,7 +26,7 @@ Every abstraction carries the same temptation: to substitute its application for
 
 The mistake isn't using abstractions. It's relying on them to replace thinking instead of supporting it.
 
-AI is the newest and most powerful addition to the stack and will profoundly impact each of our existing layers. It can guide and sharpen our thinking from first principles — or it can replace thinking entirely. AI slop is the amplification of human slop.
+AI is the newest and most powerful addition to the stack and will profoundly impact each of our existing layers. It can guide and sharpen our thinking from first principles or it can replace thinking entirely. AI slop is the amplification of human slop.
 
 ---
 
@@ -37,7 +37,7 @@ AI is the newest and most powerful addition to the stack and will profoundly imp
 
 A camera does not take a lazy photograph. An LLM does not produce hollow content — it magnifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willing to be wrong — and what comes back is sharper than what you put in.
 
-AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not be afraid of producing it. Creators must have the courage to use AI to stress-test their ideas — and to see what breaks. It is feedback. The courage is in owning the output when it fails — and accepting we are not the sole source of our ideas. We never were. As always, our ego is the greatest obstacle.
+AI slop is an indication of weak ideas or a lack of intellectual discipline and we should not be afraid of producing it. Builders must have the courage to use AI to stress-test their ideas and to see what breaks. It is feedback. The courage is in owning the output when it fails — and accepting we are not the sole source of our ideas. We never were. As always, our ego is the greatest obstacle.
 
 ---
 
@@ -50,7 +50,7 @@ Trending questions about AI circle around tips to use it better — better promp
 
 AI already handles structured reasoning more effectively than we do, which means that human intuition has never been so valuable. What a model cannot replicate is our capacity to sense that something is wrong before we can say why, to see a connection the data doesn't show, or to ask a question that reframes the problem. In the age of AI, the most valuable skill will be effectively translating intuition into structured information. Writing. 
 
-Modern business trends toward structure over instinct, measurement over judgment, process over intuition. AI marks the success of this movement. When structured reasoning becomes cheap, what remains scarce is the thinking that cannot be measured. Ideas derived from structures that constrain access to human intuition will no longer hold value.
+Modern business trends toward structure over instinct, measurement over judgment, process over intuition. AI is the crowning achievement of this movement. When structured reasoning becomes cheap, what remains scarce is the thinking that cannot be measured. Ideas derived from structures that constrain access to human intuition will no longer hold value.
 
 ---
 
@@ -59,18 +59,18 @@ Modern business trends toward structure over instinct, measurement over judgment
 > *"I have made this letter longer than usual because I have not had time to make it shorter."*
 > — Blaise Pascal, 1657
 
-Expanding an idea is easy. Compression is where the difficult part. AI has dramatically increased the rate at which we can produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
+Expanding an idea is easy. Compression is the difficult part. AI has dramatically increased the rate at which we can produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
 
-Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.
+Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.  
 
-The output of good AI-assisted writing does not necesserily mean more documents or less time spent writing. Success is the production of stronger ideas.
+The output of strong AI-assisted writing isn't more documents or less time — it's better ideas.
 
 ---
 
-## A note on this blog post
+## A note on this post
 
 My arguments are gestural and resist quantification. That is the point.
 
 This piece was written in conversation with an AI and manual editing. The argument — the claims, the framing, the things I believe — existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
 
-If the piece is good, that is because of the thinking behind it. If it is slop, I am the one responsible.
+If the writing is good, that is because of the thinking behind it. If it is slop, I am the one responsible.
