@@ -20,11 +20,11 @@ Conversation requires friction — the slow, effortful work of translating thoug
 > *"The truth is no online database will replace your daily newspaper, no CD-ROM can take the place of a competent teacher and no computer network will change the way government works."*
 > — Clifford Stoll, Newsweek, 1995
 
-Information technology is, at its core, a stack of abstractions. Languages, technologies, design patterns, frameworks, tools, up through organizational structures. Each layer was built to free up cognitive bandwidth for harder problems — to guide thinking from first principles.
+Information technology is, at its core, a stack of abstractions. Languages, tools, design patterns, frameworks, up through organizational structures. Each layer was built to free up cognitive bandwidth for harder problems — to guide thinking from first principles.
 
 Every abstraction carries the same temptation: to substitute its application for the thinking it was meant to support. This substitution has a recognizable signature: buzzwords, pointless meetings, busywork, prepackaged opinions, and efforts to standardize on "best practices" without understanding them. This is human slop. 
 
-The mistake isn't using abstractions. It's relying on them to replace reasoning instead of supporting it.
+The mistake isn't using abstractions. It's relying on them to replace thinking instead of supporting it.
 
 AI is the newest and most powerful addition to the stack and will profoundly impact each of our existing layers. It can guide and sharpen our thinking from first principles — or it can replace thinking entirely. AI slop is the amplification of human slop.
 
@@ -35,9 +35,9 @@ AI is the newest and most powerful addition to the stack and will profoundly imp
 > *"Talent is the ability to let ideas manifest themselves through you"*
 > — Rick Rubin, *The Creative Act*
 
-A camera does not take a lazy photograph. An LLM does not produce hollow content — it amplifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willingness to be wrong — and you get something real.
+A camera does not take a lazy photograph. An LLM does not produce hollow content — it magnifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willing to be wrong — and what comes back is sharper than what you put in.
 
-AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not shy away from producing it. Creators must have the courage to use AI to test their ideas and accept what they find. It is feedback. The courage is in accepting ownership over AI generated output without deflecting blame onto the tools when it fails. As always, our ego is the greatest obstacle.
+AI slop is an indication of weak ideas or a lack of intellectual discipline — and when innovating we should not be afraid of producing it. Creators must have the courage to use AI to stress-test their ideas — and to see what breaks. It is feedback. The courage is in owning the output when it fails — and accepting we are not the sole source of our ideas. We never were. As always, our ego is the greatest obstacle.
 
 ---
 
@@ -46,7 +46,7 @@ AI slop is an indication of weak ideas or a lack of intellectual discipline — 
 > *"The Answer to the Ultimate Question of Life, the Universe, and Everything is... 42."*
 > — Deep Thought, *The Hitchhiker's Guide to the Galaxy*
 
-Trending questions about AI circle around tips to use it better — better prompts, better models, better agent configurations. These questions support an economy of customers who want to avoid putting in any real effort. There is no prompt that fixes a weak idea, no model that supplies conviction, no agent configuration that replaces the harder work of knowing what you believe and why. Those obsessing over tooling details are asking the wrong question. 
+Trending questions about AI circle around tips to use it better — better prompts, better models, better agent configurations. These questions support an industry serving customers who want to avoid putting in any real effort. There is no prompt that fixes a weak idea, no model that supplies conviction, no agent configuration that replaces the harder work of knowing what you believe and why. Those obsessing over tooling details are asking the wrong question. 
 
 AI already handles structured reasoning more effectively than we do, which means that human intuition has never been so valuable. What a model cannot replicate is our capacity to sense that something is wrong before we can say why, to see a connection the data doesn't show, or to ask a question that reframes the problem. In the age of AI, the most valuable skill will be effectively translating intuition into structured information. Writing. 
 
@@ -59,11 +59,11 @@ Modern business trends toward structure over instinct, measurement over judgment
 > *"I have made this letter longer than usual because I have not had time to make it shorter."*
 > — Blaise Pascal, 1657
 
-Expanding an idea is easy. Compression is where the thinking happens. AI has dramatically increased the rate at which we produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
+Expanding an idea is easy. Compression is where the difficult part. AI has dramatically increased the rate at which we can produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
 
-Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that earns a reader's attention.
+Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.
 
-The output of good AI-assisted writing does not mean a longer document or less time spent writing. Success is the production of stronger ideas.
+The output of good AI-assisted writing does not necesserily mean more documents or less time spent writing. Success is the production of stronger ideas.
 
 ---
 
@@ -71,6 +71,6 @@ The output of good AI-assisted writing does not mean a longer document or less t
 
 My arguments are gestural and resist quantification. That is the point.
 
-This piece was written in conversation with an AI with manual editing. The argument — the claims, the framing, the things I believe — existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
+This piece was written in conversation with an AI and manual editing. The argument — the claims, the framing, the things I believe — existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
 
 If the piece is good, that is because of the thinking behind it. If it is slop, I am the one responsible.
