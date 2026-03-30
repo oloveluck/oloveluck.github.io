@@ -59,7 +59,7 @@ Modern business trends toward structure over instinct, measurement over judgment
 > *"I have made this letter longer than usual because I have not had time to make it shorter."*
 > — Blaise Pascal, 1657
 
-Expanding an idea is easy. Compression is the difficult part. AI has dramatically increased the rate at which we can produce information — but less to help our rate of consumption. The gap is the writer's problem to solve.
+Expanding an idea is easy. Compression is the difficult part. AI has dramatically increased the rate at which we can produce information — but does less to help our rate of consumption. The gap is the writer's problem to solve.
 
 Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.  
 
