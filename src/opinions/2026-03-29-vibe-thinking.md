@@ -63,7 +63,7 @@ Expanding an idea is easy. Compression is the difficult part. AI has dramaticall
 
 Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.  
 
-The output of strong AI-assisted writing isn't more documents or less time — it's better ideas.
+The output of good AI-assisted writing isn't more documents or less time. Success means stronger ideas.
 
 ---
 
