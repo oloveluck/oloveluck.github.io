@@ -71,6 +71,6 @@ The output of good AI-assisted writing isn't more documents or less time. Succes
 
 My arguments are gestural and resist quantification. That is the point.
 
-This piece was written in conversation with an AI and manual editing. The argument — the claims, the framing, the things I believe — existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
+This piece was written in conversation with AI and manual editing. My beliefs existed before the conversation began. The model made them more visible. Then I cut. Probably not enough. 
 
-If the writing is good, that is because of the thinking behind it. If it is slop, I am the one responsible.
+If the post is good, that is because of the thinking behind it. If it is slop, I am the one responsible.
