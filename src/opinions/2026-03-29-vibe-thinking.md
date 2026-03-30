@@ -35,7 +35,7 @@ AI is the newest and most powerful addition to the stack and will profoundly imp
 > *"Talent is the ability to let ideas manifest themselves through you"*
 > — Rick Rubin, *The Creative Act*
 
-A camera does not take a lazy photograph. An LLM does not produce hollow content — it magnifies whatever the user puts in. Bring it unexamined assumptions and half-formed instincts, and you get slop at scale, polished and grammatically correct. Bring it actual thinking — contested, specific, willing to be wrong — and what comes back is sharper than what you put in.
+A camera does not take a lazy photograph. An LLM does not produce hollow content — it magnifies whatever the user puts in, which means lazy thinking doesn't disappear. It scales. Bring it actual thinking — contested, specific, willing to be wrong — and what comes back is sharper than what you put in.
 
 AI slop is an indication of weak ideas or a lack of intellectual discipline — and we should not be afraid of producing it. Builders must have the courage to use AI to stress-test their ideas and to see what breaks. It is feedback. The courage is in owning the output when it fails — and accepting we are not the sole source of our ideas. We never were. As always, our ego is the greatest obstacle.
 
@@ -61,9 +61,9 @@ Modern business trends toward structure over instinct, measurement over judgment
 
 Expanding an idea is easy. Compression is the difficult part. AI has dramatically increased the rate at which we can produce information — but does less to help our rate of consumption. The gap is the writer's problem to solve.
 
-Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. This phase feels excessive. Then the real work begins: deciding what matters and shaping what remains into an idea that deserves a reader's attention.  
+Writers can use a conversation with AI to expand — surface every implication, test every objection, follow every thread until the idea is fully outside their head. Then the real work begins: deciding what matters and shaping what remains into a thought that deserves a reader's attention.  
 
-The result of effective AI-assisted writing isn't necesserily more documents in less time. Success means stronger ideas.
+Successful AI-assisted writing means stronger ideas, not more documents in less time. 
 
 ---
 
