@@ -1,11 +1,15 @@
-//> using scala 3.3
+//> using scala 3.8.4
 //> using platform scala-js
+//> using jsVersion 1.22.0
 //> using jsModuleKind es
+//> using jsEmitWasm true
 //> using dep com.lihaoyi::scalatags::0.13.1
 //> using dep org.scala-js::scalajs-dom::2.8.1
+//> using dep org.typelevel::spire::0.18.0
+//> using dep org.typelevel::cats-core::2.13.0
 
 import scalatags.JsDom.all.*
-import org.scalajs.dom.{document, window}
+import org.scalajs.dom.{document, window, html}
 
 // Domain types
 opaque type Svg = String
@@ -35,6 +39,8 @@ enum Route:
   case Home
   case OpinionsList
   case OpinionPost(slug: Slug)
+  case LabList
+  case LabAnimation(slug: Slug)
 
 final case class SiteData(
   name: String,
@@ -80,32 +86,44 @@ object Router:
     case "" | "#" | "#/"                  => Route.Home
     case "#/opinions"                     => Route.OpinionsList
     case s if s.startsWith("#/opinions/") => Route.OpinionPost(Slug(s.stripPrefix("#/opinions/")))
+    case "#/lab"                          => Route.LabList
+    case s if s.startsWith("#/lab/")      => Route.LabAnimation(Slug(s.stripPrefix("#/lab/")))
     case _                                => Route.Home
 
 // Pure view functions
 object View:
-  def page(data: SiteData, route: Route): Frag = route match
-    case Route.Home              => frag(homeWrapper(data), footer(data.footerLinks))
-    case Route.OpinionsList      => frag(opinionsPage(data), footer(data.footerLinks))
-    case Route.OpinionPost(slug) =>
-      data.opinions.find(_.slug.value == slug.value) match
-        case Some(post) => frag(postPage(post), footer(data.footerLinks))
-        case None       => frag(homeWrapper(data), footer(data.footerLinks))
+  def page(data: SiteData, route: Route): Frag =
+    val content = route match
+      case Route.Home         => homeWrapper(data)
+      case Route.OpinionsList => opinionsPage(data)
+      case Route.OpinionPost(slug) =>
+        data.opinions
+          .find(_.slug.value == slug.value)
+          .map(postPage)
+          .getOrElse(homeWrapper(data))
+      case Route.LabList => labPage
+      case Route.LabAnimation(slug) =>
+        Animations.bySlug(slug).map(animationPage).getOrElse(labPage)
+    frag(content, footer(data.footerLinks))
 
   def homeWrapper(data: SiteData): Frag =
-    div(cls := "wrapper")(
-      h1(data.name),
-      p(cls := "bio")(data.bio),
-      linkBar(data.socialLinks),
-      opinionsLink(data.opinions.nonEmpty)
+    frag(
+      canvas(id := "bg-canvas", cls := "bg-canvas"),
+      div(cls := "wrapper")(
+        h1(data.name),
+        p(cls := "bio")(data.bio),
+        linkBar(data.socialLinks),
+        navLinks(data.opinions.nonEmpty)
+      )
     )
 
-  def opinionsLink(hasOpinions: Boolean): Frag =
-    if hasOpinions then
-      div(cls := "opinions-link")(
-        a(href := "#/opinions")("opinions")
-      )
-    else frag()
+  def navLinks(hasOpinions: Boolean): Frag =
+    val links: List[Frag] =
+      (if hasOpinions then List(a(href := "#/opinions")("opinions")) else Nil)
+        :+ a(href := "#/lab")("lab")
+    div(cls := "opinions-link")(
+      links.intersperse(span(cls := "separator")("·"))
+    )
 
   def opinionsPage(data: SiteData): Frag =
     div(cls := "opinions-wrapper")(
@@ -136,6 +154,31 @@ object View:
       )
     )
 
+  def labPage: Frag =
+    div(cls := "opinions-wrapper")(
+      div(cls := "opinions-header")(
+        a(href := "#/", cls := "back-link")("← back"),
+        h1("lab")
+      ),
+      div(cls := "post-list")(
+        Animations.all.map(animPreview)
+      )
+    )
+
+  def animPreview(anim: Animation): Frag =
+    a(href := s"#/lab/${anim.slug.value}", cls := "post-preview")(
+      span(cls := "post-title")(anim.title)
+    )
+
+  def animationPage(anim: Animation): Frag =
+    div(cls := "anim-wrapper")(
+      div(cls := "post-header")(
+        a(href := "#/lab", cls := "back-link")("← lab")
+      ),
+      h1(anim.title),
+      canvas(id := "anim-canvas", cls := "anim-canvas")
+    )
+
   def linkBar(links: List[Link]): Frag =
     div(cls := "links")(links.map(renderLink))
 
@@ -150,10 +193,35 @@ object View:
 
 // Entry point - reactive hash-based routing
 @main def app(): Unit =
+  var active: Option[RunningAnimation] = None
+
   def render(): Unit =
+    active.foreach(_.cancel())
+    active = None
     val route = Router.parse(window.location.hash)
-    document.body.innerHTML = ""
-    document.body.appendChild(View.page(Data.site, route).render)
+    document.body.replaceChildren(View.page(Data.site, route).render)
+    route match
+      case Route.LabAnimation(slug) =>
+        active = Animations.bySlug(slug).map { anim =>
+          val canvas = document.getElementById("anim-canvas").asInstanceOf[html.Canvas]
+          AnimationRunner.start(anim, canvas)
+        }
+      case Route.Home =>
+        val canvas = document.getElementById("bg-canvas").asInstanceOf[html.Canvas]
+        active = Some(AnimationRunner.start(Loveluck, canvas))
+      case _ => ()
 
   render()
   window.addEventListener("hashchange", _ => render())
+
+  // the home background canvas is viewport-sized, so it must re-mount on resize
+  var resizeTimer = 0
+  window.addEventListener(
+    "resize",
+    _ =>
+      window.clearTimeout(resizeTimer)
+      resizeTimer = window.setTimeout(
+        () => if Router.parse(window.location.hash) == Route.Home then render(),
+        150
+      )
+  )
