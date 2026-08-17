@@ -2,8 +2,8 @@
 .scala-build/
 .bsp/
 
-# compiled JS output
-public/main.js
+# compiled JS/Wasm output
+public/app/
 
 # generated code
 src/generated/
@@ -23,3 +23,7 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# editor state
+.metals/
+.vscode/

@@ -30,8 +30,8 @@ jobs:
       - name: Generate opinions from markdown
         run: scala-cli run build.scala
 
-      - name: Build Scala.js
-        run: scala-cli --power package --js src/Main.scala src/generated/Opinions.scala -o public/main.js --js-mode release
+      - name: Build Scala.js (Wasm)
+        run: scala-cli --power package --js src -o public/app --js-mode release
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

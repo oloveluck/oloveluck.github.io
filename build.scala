@@ -1,10 +1,11 @@
-//> using scala 3.3
-//> using dep com.lihaoyi::os-lib:0.11.6
-//> using dep org.commonmark:commonmark:0.27.1
+//> using scala 3.8.4
+//> using dep com.lihaoyi::os-lib:0.11.8
+//> using dep org.commonmark:commonmark:0.30.0
 
 import org.commonmark.parser.Parser
 import org.commonmark.renderer.html.HtmlRenderer
-import org.commonmark.node.*
+
+final case class RawPost(slug: String, title: String, date: String, html: String)
 
 @main def build(): Unit =
   val opinionsDir = os.pwd / "src" / "opinions"
@@ -18,10 +19,7 @@ import org.commonmark.node.*
   os.makeDir.all(generatedDir)
 
   // Find all markdown files
-  val mdFiles = if os.exists(opinionsDir) then
-    os.list(opinionsDir).filter(_.ext == "md").toList
-  else
-    List.empty
+  val mdFiles = os.list(opinionsDir).filter(_.ext == "md").toList
 
   // Parse each markdown file
   val parser = Parser.builder().build()
@@ -31,12 +29,12 @@ import org.commonmark.node.*
     val content = os.read(file)
     parseFrontmatter(content) match
       case Some((frontmatter, body)) =>
-        val title = frontmatter.getOrElse("title", file.baseName)
-        val date = frontmatter.getOrElse("date", "")
-        val slug = file.baseName
-        val document = parser.parse(body)
-        val html = renderer.render(document)
-        Some((slug, title, date, html))
+        Some(RawPost(
+          slug = file.baseName,
+          title = frontmatter.getOrElse("title", file.baseName),
+          date = frontmatter.getOrElse("date", ""),
+          html = renderer.render(parser.parse(body))
+        ))
       case None =>
         println(s"Warning: Could not parse frontmatter in ${file.last}")
         None
@@ -63,13 +61,15 @@ def parseFrontmatter(content: String): Option[(Map[String, String], String)] =
     else None
   else None
 
-def generateScalaCode(posts: List[(String, String, String, String)]): String =
-  val postEntries = posts.map { case (slug, title, date, html) =>
-    val escapedHtml = html
-      .replace("\\", "\\\\")
-      .replace("\"", "\\\"")
-      .replace("\n", "\\n")
-    s"""  Post(Slug("$slug"), "$title", "$date", raw("$escapedHtml"))"""
+def escapeScalaString(s: String): String =
+  s.replace("\\", "\\\\")
+    .replace("\"", "\\\"")
+    .replace("\n", "\\n")
+    .replace("\r", "\\r")
+
+def generateScalaCode(posts: List[RawPost]): String =
+  val postEntries = posts.map { p =>
+    s"""  Post(Slug("${escapeScalaString(p.slug)}"), "${escapeScalaString(p.title)}", "${escapeScalaString(p.date)}", raw("${escapeScalaString(p.html)}"))"""
   }.mkString(",\n")
 
   s"""|import scalatags.JsDom.all.*
