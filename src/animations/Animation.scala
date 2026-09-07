@@ -113,7 +113,7 @@ object AnimationRunner:
 
 object Animations:
   val all: List[Animation] =
-    List(EpicycleAnimation.heart, EpicycleAnimation.clover, Julia, Newton, Mobius, Lorenz, Fern, Knot, Hopf)
+    List(EpicycleAnimation.heart, EpicycleAnimation.clover, Mandelbrot, Julia, Newton, Mobius, Lorenz, Fern, Knot, Hopf)
 
   def bySlug(slug: Slug): Option[Animation] =
     all.find(_.slug.value == slug.value)
